@@ -1,0 +1,18 @@
+.inbox {
+  margin: 50px auto;
+
+  width: 320px;
+  height: auto;
+  display: flex;
+
+  background:white;
+
+  flex-direction: column;
+
+  border-radius: 4px;
+  overflow: hidden;
+
+  box-shadow: 5px 5px 1px 1px rgba(black, 0.3);
+
+}
+@import './letter';

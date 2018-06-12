@@ -1,0 +1,54 @@
+// .search-item
+// .search-item_name
+// .search-item_population
+
+@mixin gradient($direction){
+  background: linear-gradient(to $direction,  #ffffff 0%,#EFEFEF 100%);
+}
+.search-item{
+  padding: 5px 10px;
+  background: white;
+  list-style: none;
+
+  font-size: 18px;
+
+  position: relative;
+  overflow: hidden;
+
+  border-bottom: 1px solid gray;
+
+  // transform: skew()
+  // 
+  &:nth-child(odd){
+    margin-top: -1px;
+
+    transform: perspective(100px) rotateX(-3deg) translateY(3px);
+    @include gradient(top);
+    .search-item_population {
+      @include gradient(top);
+    }
+  }
+  &:nth-child(even){
+    transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+    @include gradient(bottom);
+    .search-item_population {
+      @include gradient(bottom);
+    }
+  }
+
+  .search-item_name{
+    white-space: nowrap;
+    position: relative;
+    .found{
+      background: $yellow;
+    }
+  }
+  .search-item_population{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px 10px 5px 5px;
+
+    background: white;
+  }
+}

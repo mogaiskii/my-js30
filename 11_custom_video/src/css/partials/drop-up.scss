@@ -1,0 +1,43 @@
+.drop-up{
+  position: relative;
+
+  background: #222;
+  .drop-up_options{
+    // display: none;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background: #222;
+    width: 3em;
+
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+
+    transition: all .3s ease-in-out;
+
+    &.open{
+      height: 150px;
+      opacity: 1;
+      border-bottom: 2px solid rgba(#eee, 0.3);
+    }
+
+    .drop-up_option{
+      cursor: pointer;
+      &:hover{
+        background:#333;
+      }
+    }
+  }
+  .drop-up_current{
+    width: 3em;
+    overflow: hidden;
+    background: #222;
+    &:before{
+      content: '▴';
+      position: absolute;
+      left: 5px;
+      bottom: 0;
+    }
+  }
+}

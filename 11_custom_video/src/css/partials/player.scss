@@ -1,0 +1,26 @@
+.player{
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: 0px 0px 10px 2px black;
+
+  background: black;
+
+  .player_controls{
+    position: absolute;
+
+    background: rgba(black, 0.7);
+    width: 100%;
+
+    bottom: -30px;
+
+    transition: all .1s ease-in;
+    &.open{
+      top: auto;
+      bottom: 0;
+    }
+  }
+}
+
+@import './control-bar';
+@import './progress';

@@ -1,0 +1,68 @@
+<doctype html>
+<html>
+  <head>
+  <style> .style{ color: red; } </style>
+  </head>
+  <body>
+  <p onclick="toggleStyle(this)">Remember about html node breakpoint !!</p>
+<script>
+  function toggleStyle(el){
+    // YEP! Here is!
+    el.classList.toggle('style')
+  }
+
+ console.log('never see this');
+  console.clear();
+
+  console.log('~ %s ~~', 'string');
+  var str = 'string'
+  console.log(`~ ${str} ~~`);
+
+  console.log('\n\n\n\n\n\n\n\n %c string ', 'color: #BADA55; font-size: 24px; background: url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); text-shadow: 10px 5px 0 blue; padding: 100px; border: 2px solid black;');console.log('\n\n\n\n\n\n\n\n');
+  
+  console.warn('warning')
+  console.error('err')
+ 
+  console.info('inf')
+
+  console.assert(1 === 1, 'wrong')
+  console.assert(1 === 0, 'wrong for today')
+
+  var p = document.querySelector('p');
+  console.log(p);
+  console.dir(p);
+
+  console.group('names');
+  ['Mary', 'Alex', 'Tim'].forEach( name => console.log(name) )
+  console.groupEnd('names');
+
+  console.groupCollapsed('alsoNames');
+  ['Lisy', 'John', 'Kasuma'].forEach( name => console.log(name) )
+  console.groupEnd('alsoNames');
+
+  console.count('Name');
+  console.count('AnotherName');
+  for (let i = 1; i<5; i++){
+    console.count('Name');
+  }
+
+  console.time('fetching data');
+
+  fetch('https://api.github.com/users/wesbos')
+    .then( data => data.json() )
+    .then( data => {
+      console.timeEnd('fetching data');
+      console.log(data);
+    })
+
+
+  const dogs = [
+     { name: 'hary', age: 6 },
+     { name: 'henry', age: 7}
+  ]
+
+  console.table(dogs)
+  
+</script>
+  </body>
+</html>

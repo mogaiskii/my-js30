@@ -1,0 +1,28 @@
+.control-bar{
+  .control-bar_play{
+    color: white;
+    background:none;
+    border: none;
+    font-size: 24px;
+  }
+
+  .control-bar_volume{
+    position: relative;
+    top: 3px;
+  }
+  
+  .control-bar_rate-wrapper{
+    color: #bada55;
+    float: right;
+    position: relative;
+    .control-bar_rate{
+      float: right;
+      text-align: right; 
+      margin-right: 10px;
+    }
+  }
+}
+
+@import './drop-up';
+
+@import './slider';

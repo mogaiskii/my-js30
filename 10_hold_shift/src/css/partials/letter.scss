@@ -1,0 +1,47 @@
+.letter{
+
+  display: flex;
+
+  border-bottom: 1px solid $border-color;
+  box-shadow:  0px 1px 1px 1px $border-color;
+  &:last-child{
+    border-bottom: none;
+  }
+
+  &:hover, &:active, &:focus{
+    background: rgba(black, 0.2);  
+    box-shadow: inset 0px 0px 3px 0px black;
+    .letter_checkbox-wrapper{
+      border-color: rgba(black, 0.1);  
+    }
+  }
+
+  .letter_checkbox-wrapper{
+    padding: $letter-padding;
+    border-right: 1.5px solid $border-color;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .letter_name{
+    padding: $letter-padding;
+  }
+
+  &.chosen{
+    text-decoration: line-through;
+    background: hsla(220, 50%, 50%, 0.15);
+    
+    .letter_checkbox-wrapper{
+      border-color: hsla(220, 50%, 50%, 0.2);  
+    }
+
+    &:hover, &:active, &:focus{
+      background: hsla(220, 50%, 30%, 0.15);  
+      box-shadow: inset 0px 0px 3px 0px black;
+    }
+  }
+}
